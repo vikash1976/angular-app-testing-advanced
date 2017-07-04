@@ -1,6 +1,17 @@
-# IntegrationTestingDemo
+# IntegrationTesting Demo
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
+This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.2.
+
+This project explores Angular Testing:
+
+- Integration testing of component(s) with their template, service(s) etc.
+
+### How To
+
+- Clone the repo
+- run `npm install`
+- run `ng test` and keep adding/editing tests
+- See the results in console as well as @ http://localhost:9876/debug.html
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
