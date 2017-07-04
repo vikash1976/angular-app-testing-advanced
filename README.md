@@ -4,7 +4,7 @@ This project was generated with [angular-cli](https://github.com/angular/angular
 
 This project explores Angular Testing:
 
-- Integration testing of component(s) with their template, service(s) etc.
+- Integration testing of component(s) with their template, service(s) returning as Observable or Promise etc.
 
 ### How To
 
