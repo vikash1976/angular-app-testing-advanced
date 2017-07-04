@@ -1,7 +1,7 @@
 {
   "project": {
-    "version": "1.0.0-beta.26",
-    "name": "integration-testing-demo"
+    "version": "1.0.2",
+    "name": "angular-app-testing-advanced"
   },
   "apps": [
     {
