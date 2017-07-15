@@ -1,3 +1,4 @@
+import { TitlecasePipe } from './../titlecase.pipe';
 import { Observable, Subject } from 'rxjs';
 
 /* tslint:disable:no-unused-variable */
@@ -34,7 +35,7 @@ describe('UserDetailsComponent', () => {
   beforeEach(() => {
 
     TestBed.configureTestingModule({
-      declarations: [UserDetailsComponent],
+      declarations: [UserDetailsComponent, TitlecasePipe],
       providers: [
         { provide: Router, useClass: RouterStub },
         { provide: ActivatedRoute, useClass: ActivatedRouteStub }
@@ -64,4 +65,6 @@ describe('UserDetailsComponent', () => {
 
     expect(spy).toHaveBeenCalledWith(['not-found']);
   });
+
+  
 });

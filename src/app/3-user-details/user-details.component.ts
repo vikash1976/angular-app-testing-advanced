@@ -7,13 +7,17 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./user-details.component.css']
 })
 export class UserDetailsComponent implements OnInit {
+  userId: string;
+  title: string = "user details works";
   constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.params.subscribe(p => {
+      this.userId = p['id'];
       if (p['id'] === 0)
         this.router.navigate(['not-found']);
     });
+    
   }
 
   save() { 

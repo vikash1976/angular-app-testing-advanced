@@ -14,7 +14,8 @@ import { routes } from './app.routes';
 import { UsersComponent } from './users/users.component';
 
 import { HighlightDirective } from './highlight.directive';
-import { NavigationComponent } from './navigation/navigation.component'; 
+import { NavigationComponent } from './navigation/navigation.component';
+import { TitlecasePipe } from './titlecase.pipe'; 
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { NavigationComponent } from './navigation/navigation.component';
     VoterComponent,
     UsersComponent,
     HighlightDirective,
-    NavigationComponent
+    NavigationComponent,
+    TitlecasePipe
   ],
   imports: [
     RouterModule.forRoot(routes),
