@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { TitlecasePipe } from './../titlecase.pipe';
 import { Observable, Subject } from 'rxjs';
 
@@ -35,6 +36,7 @@ describe('UserDetailsComponent', () => {
   beforeEach(() => {
 
     TestBed.configureTestingModule({
+      imports: [FormsModule],
       declarations: [UserDetailsComponent, TitlecasePipe],
       providers: [
         { provide: Router, useClass: RouterStub },
@@ -66,5 +68,23 @@ describe('UserDetailsComponent', () => {
     expect(spy).toHaveBeenCalledWith(['not-found']);
   });
 
-  
+  it('should convert title name to Title Case', () => {
+  const inputName = 'quick BROWN  fox';
+  const titleCaseName = 'Quick Brown  Fox';
+  let titleDisplay = fixture.debugElement.query(By.css('span')).nativeElement;
+  let titleInput = fixture.debugElement.query(By.css('input')).nativeElement;
+ 
+  // simulate user entering new name into the input box
+  titleInput.value = inputName;
+ 
+  // dispatch a DOM event so that Angular learns of input value change.
+  let evnt = document.createEvent('CustomEvent');
+  evnt.initCustomEvent('input', false, false, null);
+  titleInput.dispatchEvent(evnt);
+ 
+  // Tell Angular to update the output span through the title pipe
+  fixture.detectChanges();
+ 
+  expect(titleDisplay.textContent).toBe(titleCaseName);
+});
 });

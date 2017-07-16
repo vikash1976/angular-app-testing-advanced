@@ -1,6 +1,9 @@
 <p>
   <span>{{ title | titlecase }}</span>
 </p>
-
+<div>
+    <label for="title">title: </label>
+    <input id="title" [(ngModel)]="title" />
+  </div>
 <p>UserId: {{ userId }}</p>
 <button (click)="save()">Save</button>
