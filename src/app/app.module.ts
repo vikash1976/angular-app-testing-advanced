@@ -42,6 +42,7 @@ import { MyMaterialFormComponent } from './my-material-form/my-material-form.com
     BrowserAnimationsModule,
     MdInputModule,
     MdButtonModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
