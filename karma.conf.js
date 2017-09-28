@@ -9,6 +9,7 @@ module.exports = function (config) {
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
       require('karma-remap-istanbul'),
+      require('karma-coverage-istanbul-reporter'), //for covergae to be ON
       require('@angular/cli/plugins/karma')
     ],
     files: [
@@ -31,7 +32,7 @@ module.exports = function (config) {
       environment: 'dev'
     },
     reporters: config.angularCli && config.angularCli.codeCoverage
-              ? ['progress', 'karma-remap-istanbul']
+              ? ['progress', 'coverage-istanbul']
               : ['progress'],
     port: 9876,
     colors: true,

@@ -43,7 +43,7 @@ describe('VoterComponent', () => {
     expect(component.totalVotes).toBe(1);
   });
 
-    it('should decreas totalVotes when downvote button is clicked', () => {
+    it('should decrease totalVotes when downvote button is clicked', () => {
     let button = fixture.debugElement.query(By.css('.glyphicon-menu-down'));
 
     button.triggerEventHandler('click', null);

@@ -1,3 +1,4 @@
+import { element } from 'protractor';
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HighlightDirective } from './highlight.directive';
@@ -27,14 +28,14 @@ describe('HighlightDirective', () => {
     fixture.detectChanges(); 
   });
 
-  it('should highlight 1st para with directives bgColor color', () => {
+  it('should highlight element with directives bgColor set to the element', () => {
     let de = fixture.debugElement.queryAll(By.css('p'))[0];
 
     let directive = de.injector.get(HighlightDirective);
     expect(de.nativeElement.style.backgroundColor).toBe(directive.bgColor);
   });
 
-   it('should highlight 2nd para with default background color', () => {
+   it('should highlight element with default background color, when no color is set', () => {
     let de = fixture.debugElement.queryAll(By.css('p'))[1];
 
     let directive = de.injector.get(HighlightDirective);
